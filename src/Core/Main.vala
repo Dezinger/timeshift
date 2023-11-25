@@ -572,8 +572,8 @@ public class Main : GLib.Object{
 		exclude_list_default.add("/etc/timeshift.json");
 		exclude_list_default.add("/var/log/timeshift/*");
 		exclude_list_default.add("/var/log/timeshift-btrfs/*");
-		exclude_list_default.add("/swapfile");
-		exclude_list_default.add("/snap/*");
+		//exclude_list_default.add("/swapfile");
+		//exclude_list_default.add("/snap/*");
 
 		foreach(var entry in FsTabEntry.read_file("/etc/fstab")){
 
@@ -648,8 +648,8 @@ public class Main : GLib.Object{
 
 		//exclude_list_home.add("+ /root/.**");
 		//exclude_list_home.add("+ /home/*/.**");
-		exclude_list_home.add("/root/**");
-		exclude_list_home.add("/home/*/**"); // Note: /home/** ignores include filters under /home
+		//exclude_list_home.add("/root/**");
+		//exclude_list_home.add("/home/*/**"); // Note: /home/** ignores include filters under /home
 
 		/*
 		Most web browsers store their cache under ~/.cache and /tmp
